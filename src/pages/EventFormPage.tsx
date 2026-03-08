@@ -21,7 +21,7 @@ const EventFormPage = () => {
   } = useEventForm(id);
 
   useEffect(() => {
-    if (event) initializeForm(event);
+    if (event && isEditMode) initializeForm(event);
   }, [event]);
 
   if (isEditMode && isLoading) {
@@ -61,11 +61,7 @@ const EventFormPage = () => {
         </Text>
       </Stack>
 
-      <Box
-        borderWidth="1px"
-        borderRadius="lg"
-        p={6}
-      >
+      <Box borderWidth="1px" borderRadius="lg" p={6}>
         <EventForm
           formData={formData}
           errors={errors}

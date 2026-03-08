@@ -15,6 +15,7 @@ const useEvent = (id: string): UseEventReturn => {
   const [error, setError] = useState<string | null>(null);
 
   const fetchEvent = useCallback(async () => {
+    if (!id) return;
     setIsLoading(true);
     setError(null);
     try {
