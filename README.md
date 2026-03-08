@@ -45,7 +45,7 @@ npm install
 | `category`    | String                |
 | `capacity`    | Number                |
 
-4. Edit default data for the next JSON:
+4. Edit default data for the next JSON / Edita los datos por defecto con el siguiente JSON
 
 ```JSON
 [
