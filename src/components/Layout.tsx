@@ -27,7 +27,8 @@ const Layout = ({ children }: LayoutProps) => {
               alignItems="center"
               gap="2"
             >
-              Event Dashboard <LuLayoutDashboard />
+              <LuLayoutDashboard />
+              Event Dashboard
             </Heading>
 
             {isOnList && (

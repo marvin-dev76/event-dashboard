@@ -10,7 +10,14 @@ export interface Event {
   capacity: number;
 }
 
-export type EventFormData = Omit<Event, "id">;
+export interface EventFormData {
+  title: string;
+  description: string;
+  date: string;
+  location: string;
+  category: EventCategory;
+  capacity: number;
+}
 
 export interface EventFormErrors {
   title?: string;

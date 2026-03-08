@@ -46,11 +46,16 @@ const useEventForm = (eventId?: string): UseEventFormReturn => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const initializeForm = (event: Event) => {
+    console.log("date value:", event.date, typeof event.date);
+
     const { id: _, ...rest } = event;
     setFormData(rest);
   };
 
-  const handleChange = (field: keyof EventFormData, value: string | number) => {
+  const handleChange = (
+    field: keyof EventFormData,
+    value: string | number | null,
+  ) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
