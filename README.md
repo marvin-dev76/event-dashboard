@@ -45,7 +45,104 @@ npm install
 | `category`    | String                |
 | `capacity`    | Number                |
 
-4. Your endpoint will look like / Tu endpoint se verá así:
+4. Edit default data for the next JSON:
+
+```JSON
+[
+  {
+    "title": "Modern Web Development Conference",
+    "date": "2025-05-20",
+    "location": "Mountain View, California, USA",
+    "category": "conference",
+    "capacity": 32,
+    "description": "A conference focused on modern tools and practices for web developers.",
+    "id": "1"
+  },
+  {
+    "title": "Local Developers Meetup",
+    "date": "2025-03-15",
+    "location": "Austin, Texas, USA",
+    "category": "meetup",
+    "capacity": 93,
+    "description": "An informal meetup for developers to network and share ideas.",
+    "id": "2"
+  },
+  {
+    "title": "Hands-on React Workshop",
+    "date": "2025-04-12",
+    "location": "Toronto, Canada",
+    "category": "workshop",
+    "capacity": 51,
+    "description": "A practical workshop where participants build a React application from scratch.",
+    "id": "3"
+  },
+  {
+    "title": "Introduction to Cloud Computing Webinar",
+    "date": "2025-06-09",
+    "location": "Online",
+    "category": "webinar",
+    "capacity": 50,
+    "description": "An online session explaining the basics of cloud platforms and services.",
+    "id": "4"
+  },
+  {
+    "title": "Software Architecture Conference",
+    "date": "2025-05-19",
+    "location": "Seattle, Washington, USA",
+    "category": "conference",
+    "capacity": 51,
+    "description": "Experts discuss best practices and patterns in modern software architecture.",
+    "id": "5"
+  },
+  {
+    "title": "Clean Code Workshop",
+    "date": "2025-04-26",
+    "location": "Yokohama, Japan",
+    "category": "workshop",
+    "capacity": 22,
+    "description": "A hands-on workshop focused on writing maintainable and readable code.",
+    "id": "6"
+  },
+  {
+    "title": "Frontend Developers Meetup",
+    "date": "2025-07-10",
+    "location": "London, United Kingdom",
+    "category": "meetup",
+    "capacity": 64,
+    "description": "Frontend developers gather to discuss frameworks, tools, and trends.",
+    "id": "7"
+  },
+  {
+    "title": "Getting Started with APIs Webinar",
+    "date": "2025-08-05",
+    "location": "Online",
+    "category": "webinar",
+    "capacity": 1,
+    "description": "A beginner-friendly webinar about designing and consuming APIs.",
+    "id": "8"
+  },
+  {
+    "title": "AI and Software Engineering Conference",
+    "date": "2025-07-26",
+    "location": "Shanghai, China",
+    "category": "conference",
+    "capacity": 63,
+    "description": "A conference exploring how AI is transforming software development.",
+    "id": "9"
+  },
+  {
+    "title": "Full Stack Developers Meetup",
+    "date": "2025-09-18",
+    "location": "Berlin, Germany",
+    "category": "meetup",
+    "capacity": 84,
+    "description": "A meetup for full stack developers to share experiences and best practices.",
+    "id": "10"
+  }
+]
+```
+
+5. Your endpoint will look like / Tu endpoint se verá así:
 
 ```
 https://[your-id].mockapi.io/api/v1/events
