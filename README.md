@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# EventDash
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simplified event management dashboard built with React, TypeScript, and Chakra UI.
 
-Currently, two official plugins are available:
+> Panel de administración de eventos construido con React, TypeScript y Chakra UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React 19** + **TypeScript**
+- **React Router v7**
+- **Chakra UI v3**
+- **Axios**
+- **MockAPI** — REST mock backend
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started / Inicio
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. Clone & install / Clonar e instalar
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/event-dashboard.git
+cd event-dashboard
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Set up MockAPI / Configurar MockAPI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Create a free account at [mockapi.io](https://mockapi.io)
+2. Create a new project and a resource called `events`
+3. Define the schema:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+> Crea una cuenta en [mockapi.io](https://mockapi.io), un proyecto y un resource llamado `events` con el siguiente schema:
+
+| Field / Campo | Type / Tipo           |
+| ------------- | --------------------- |
+| `title`       | String                |
+| `description` | String                |
+| `date`        | String (`YYYY-MM-DD`) |
+| `location`    | String                |
+| `category`    | String                |
+| `capacity`    | Number                |
+
+4. Your endpoint will look like / Tu endpoint se verá así:
+
 ```
+https://[your-id].mockapi.io/api/v1/events
+```
+
+### 3. Environment variables / Variables de entorno
+
+Create a `.env` file in the root / Crea un archivo `.env` en la raíz:
+
+```bash
+VITE_API_BASE_URL=https://[your-id].mockapi.io/api/v1
+```
+
+### 4. Run / Correr
+
+```bash
+npm run dev
+```
+
+---
+
+## Features / Funcionalidades
+
+- List, create, edit and delete events
+- Search by title or location
+- Form validation
+- Responsive layout
+
+> Listar, crear, editar y eliminar eventos — Búsqueda por título o ubicación — Validación de formulario — Layout responsivo

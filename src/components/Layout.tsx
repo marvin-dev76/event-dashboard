@@ -2,6 +2,7 @@ import { Box, Container, Flex, Heading, Button } from "@chakra-ui/react";
 import { useNavigate, useLocation } from "react-router-dom";
 import type { ReactNode } from "react";
 import { LuLayoutDashboard } from "react-icons/lu";
+import Footer from "@/components/Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -14,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
   const isOnList = location.pathname === "/";
 
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" display="flex" flexDir="column">
       <Box as="nav">
         <Container maxW="5xl" py="8">
           <Flex justify="space-between" align="center">
@@ -40,9 +41,11 @@ const Layout = ({ children }: LayoutProps) => {
         </Container>
       </Box>
 
-      <Container maxW="5xl" py="8">
+      <Container maxW="5xl" py="8" flex="1">
         {children}
       </Container>
+
+      <Footer />
     </Box>
   );
 };
