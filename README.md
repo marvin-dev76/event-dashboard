@@ -4,6 +4,8 @@ A simplified event management dashboard built with React, TypeScript, and Chakra
 
 > Panel de administración de eventos construido con React, TypeScript y Chakra UI.
 
+<img width="1889" height="904" alt="Screenshot 2026-03-08 164759" src="https://github.com/user-attachments/assets/4a91f8e3-8b5a-469d-bb7b-f288a9e1d8ed" />
+
 ---
 
 ## Stack
