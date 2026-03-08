@@ -8,31 +8,17 @@ import {
   SimpleGrid,
   DatePicker,
   Portal,
-  type DateValue,
   parseDate,
 } from "@chakra-ui/react";
 import { LuCalendar } from "react-icons/lu";
-import type {
-  EventFormData,
-  EventFormErrors,
-  EventCategory,
-} from "@/types/event";
-
-const CATEGORIES: EventCategory[] = [
-  "conference",
-  "workshop",
-  "meetup",
-  "webinar",
-];
+import type { EventFormData, EventFormErrors } from "@/types/event";
+import { CATEGORIES } from "@/util/category-colors";
 
 interface EventFormProps {
   formData: EventFormData;
   errors: EventFormErrors;
   isSubmitting: boolean;
-  onChange: (
-    field: keyof EventFormData,
-    value: string | number | DateValue,
-  ) => void;
+  onChange: (field: keyof EventFormData, value: string | number) => void;
   onSubmit: () => Promise<void>;
   onCancel: () => void;
 }
@@ -156,7 +142,7 @@ const EventForm = ({
       <SimpleGrid columns={2} gap={3} pt={2}>
         <Button
           variant="outline"
-          colorScheme="gray"
+          colorPalette="gray"
           onClick={onCancel}
           disabled={isSubmitting}
         >

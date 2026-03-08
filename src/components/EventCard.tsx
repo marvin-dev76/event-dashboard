@@ -11,19 +11,13 @@ import {
 import { useNavigate } from "react-router-dom";
 import type { Event } from "@/types/event";
 import { LuMapPin, LuUsers } from "react-icons/lu";
+import { CATEGORY_COLORS } from "@/util/category-colors";
 
 interface EventCardProps {
   event: Event;
   onDelete: (id: string) => Promise<void>;
   isDeleting: boolean;
 }
-
-const CATEGORY_COLORS: Record<string, string> = {
-  conference: "blue",
-  workshop: "orange",
-  meetup: "green",
-  webinar: "purple",
-};
 
 const EventCard = ({ event, onDelete, isDeleting }: EventCardProps) => {
   const navigate = useNavigate();
